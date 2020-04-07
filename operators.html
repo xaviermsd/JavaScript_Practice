@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operators</title>
+  </head>
+  <body>
+    <script>
+      var x = 5; // assign the value 5 to x
+      var y = 2; // assign the value 2 to y
+      var z = x + y; // assign the value 7 to z (x + y)
+      var a = x * y; //Multiplying
+      document.write(z);
+      document.write("<br>");
+      document.write(a);
+      document.write("<br>");
+
+      //JavaScript Arithmetic Operators
+      var arth1 = 10;
+      arth1 -= 5; //arth1=arth1+5;
+      document.write(arth1);
+
+      //JavaScript String Operators
+      //The + operator can also be used to add (concatenate) strings.var txt1 = "John";
+      document.write("<br>");
+      var txt1 = "John";
+      var txt2 = "Doe";
+      var txt3 = txt1 + " " + txt2;
+      document.write(txt3);
+
+      //Adding Strings and Numbers
+      var n1 = 5 + 5;
+      var n2 = "5" + 5;
+      var n3 = "Hello" + 5;
+      document.write("<br>");
+      document.write(n1); //10
+      document.write("<br>");
+      document.write(n2); //55
+      document.write("<br>");
+      document.write(n3); //Hello5
+      document.write("<br>");
+
+      //JavaScript Comparison Operators
+
+      //Given that x = 5, the table below explains the comparison operators:
+      // ==	equal to
+      //x == 8	false
+      // x == 5	true
+      // x == "5"	true
+
+      // ===	equal value and equal type
+      //x === 5	true
+      // x === "5"	false
+
+      // !=	not equal
+      //x != 8	true
+
+      // !==	not equal value or not equal type
+      //x !== 5	false
+      // x !== "5"	true
+      // x !== 8	true
+
+      // >	greater than
+      //x > 8	false
+
+      // <	less than
+      //x < 8	true
+
+      // >=	greater than or equal to
+      //x >= 8	false
+
+      // <=	less than or equal to
+      //x <= 8	true
+
+      //Logical Operators
+
+      //Given that x = 6 and y = 3, the table below explains the logical operators:
+      //  && and	
+      // (x < 10 && y > 1) is true
+      // ||	or	
+      //(x == 5 || y == 5) is false
+      // !	not
+      //	!(x == y) is true
+
+      //Conditional (Ternary) Operator
+      //JavaScript also contains a conditional operator that assigns a value to a variable based on some condition.
+      //Syntax
+
+      //variablename = (condition) ? value1:value2 
+      var age=5;
+      var voteable = (age < 18) ? "Too young":"Old enough";
+      document.write(voteable);
+      
+    </script>
+  </body>
+</html>

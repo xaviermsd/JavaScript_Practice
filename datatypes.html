@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title>JavaScript Practice</title>
+  </head>
+  <body>
+    <p id="array_body"></p>
+    <p id="object_body"></p>
+    <p id="typeOf_body"></p>
+    <script>
+      var length = 16; // Number
+      var lastName = "Johnson"; // String
+      var x = { firstName: "John", lastName: "Doe" }; // Object
+
+      // JavaScript Types are Dynamic
+      // JavaScript has dynamic types. This means that the same variable can be used to hold different data types:
+
+      var x; // Now x is undefined
+      x = 5; // Now x is a Number
+      x = "John"; // Now x is a String
+
+      //JavaScript Booleans
+      //var x = 5;
+      //var y = 5;
+      //var z = 6;
+      //var ok =(x == z);
+      //document.write(ok);       // Returns true
+      //(x == z)       // Returns false
+
+      //JavaScript Arrays
+      var cars = ["Marsedes", "Volvo", "BMW"];
+      document.getElementById("array_body").innerHTML = cars[0];
+
+      //JavaScript Objects
+      //JavaScript objects are written with curly braces {}.
+      //Object properties are written as name:value pairs, separated by commas.
+      var person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue",
+      };
+      document.getElementById("object_body").innerHTML =
+        "First Name is : " + person.firstName;
+      //The typeof Operator
+      //You can use the JavaScript typeof operator to find the type of a JavaScript variable.
+      //The typeof operator returns the type of a variable or an expression:
+      typeof ""; // Returns "string"
+      typeof "John"; // Returns "string"
+      typeof "John Doe"; // Returns "string"
+      document.getElementById("typeOf_body").innerHTML =
+        typeof "" + "<br>" + typeof "John" + "<br>" + typeof "John Doe";
+    </script>
+  </body>
+</html>
