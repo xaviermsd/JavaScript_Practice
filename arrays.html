@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays</title>
+  </head>
+  <body>
+    <script>
+      //Arrays
+
+      //   var myArray = [
+      //     "Harsh",
+      //     "Prajapati",
+      //     "Web Developer",
+      //     "Work From Home",
+      //     "Indylogix",
+      //   ];
+      //   for (var a = 0; a <= 4; a++) {
+      //     document.write(myArray[a] + "<br>");
+      //   }
+
+      //New Way to create Arrays
+
+      //   var myArray2 = new Array();
+      //   myArray2[0] = "ok1";
+      //   myArray2[1] = "ok2";
+      //   myArray2[2] = "ok3";
+      //   myArray2[3] = "ok4";
+      //   myArray2[4] = "ok5";
+      //   for (var a = 0; a <= 4; a++) {
+      //     document.write(myArray2[a] + "<br>");
+      //   }
+
+      //New Way to create Arrays - Get Values from Users
+      //   var myArray3 = new Array();
+      //   for (var g = 0; g < 5; g++) {
+      //     myArray3[g] = prompt("Enter the Value of Array");
+      //   }
+      //   for (var h = 0; h <= 4; h++) {
+      //     document.write(myArray3[h] + "<br>");
+      //   }
+
+      //MultiDimensional with An Example of Table:
+      var myArray4 = [
+        ["Harsh", "18", "Male", "BE"],
+        ["Harsh2", "19", "Male", "ME"],
+        ["Harsh3", "20", "Male", "BSC"],
+        ["Harsh4", "21", "Male", "MSC"],
+      ];
+      document.write("<table style='border:1px solid black;'>");
+      document.write("<th style='border:1px solid black;'>ok</th>");
+      document.write("<th style='border:1px solid black;'>ok</th>");
+      document.write("<th style='border:1px solid black;'>ok</th>");
+      document.write("<th style='border:1px solid black;'>ok</th>");
+      for (var a = 0; a <= 3; a++) {
+        document.write("<tr>");
+        for (var b = 0; b <= 3; b++) {
+          document.write(
+            "<td style='border:1px solid black;''>" + myArray4[a][b] + "</td>"
+          );
+        }
+        document.write("</tr>");
+      }
+      document.write("</table>");
+
+      //arrayOperations
+      //arrayMethods
+
+      //1. Array.push() : Adding Element at the end of an Array. As array in JavaScript are mutable object, we can easily add or remove elements from the Array. And it dynamically changes as we modify the elements from the array.
+      // Syntax :
+      //Array.push(item1, item2 …)
+      // Parameters: Items to be added to an array.
+
+      //Description: This method is used add elements at the end of an array.
+      // Adding elements at the end of an array
+      // Declaring and initializing arrays
+
+      document.write("Array Push: <br>");
+      var number_arr = [10, 20, 30, 40, 50];
+      var string_arr = ["piyush", "gourav", "smruti", "ritu"];
+
+      // push()
+      // number_arr contains [10, 20, 30, 40, 50, 60]
+      number_arr.push(60);
+      number_arr.sort()
+
+      // We can pass multiple parameters to the push()
+      // number_arr contains
+      // [10, 20, 30, 40, 50, 60, 70, 80, 90]
+      number_arr.push(70, 80, 90);
+
+      // string_arr contains
+      // ["piyush", "gourav", "smruti", "ritu", "sumit", "amit"];
+      string_arr.push("sumit", "amit");
+
+      // Printing both the array after performing push operation
+      document.write("After push op " + number_arr + "<br>");
+      document.write("After push op " + string_arr);
+
+      // concat()	Merge two or more arrays, and returns a new array.
+     
+      // copyWithin()	Copies part of an array to another location in the same array and returns it.
+     
+      // entries()	Returns a key/value pair Array Iteration Object.
+     
+      // every()	Checks if every element in an array pass a test in a testing function.
+      
+      // fill()	Fill the elements in an array with a static value.
+     
+      // filter()	Creates a new array with all elements that pass the test in a testing function.
+     
+      // find()	Returns the value of the first element in an array that pass the test in a testing function.
+     
+      // findIndex()	Returns the index of the first element in an array that pass the test in a testing function.
+    
+      // forEach()	Calls a function once for each array element.
+     
+      // from()	Creates an array from an object.
+    
+      // includes()	Determines whether an array includes a certain element.
+     
+      // indexOf()	Search the array for an element and returns its first index.
+     
+      // isArray()	Determines whether the passed value is an array.
+     
+      // join()	Joins all elements of an array into a string.
+     
+      // keys()	Returns a Array Iteration Object, containing the keys of the original array.
+     
+      // lastIndexOf()	Search the array for an element, starting at the end, and returns its last index.
+     
+      // map()	Creates a new array with the results of calling a function for each array element.
+    
+      // pop()	Removes the last element from an array, and returns that element.
+     
+      // push()	Adds one or more elements to the end of an array, and returns the array's new length.
+    
+      // reduce()	Reduce the values of an array to a single value (from left-to-right).
+     
+      // reduceRight()	Reduce the values of an array to a single value (from right-to-left).
+    
+      // reverse()	Reverses the order of the elements in an array.
+    
+      // shift()	Removes the first element from an array, and returns that element.
+    
+      // slice()	Selects a part of an array, and returns the new array.
+     
+      // some()	Checks if any of the elements in an array passes the test in a testing function.
+    
+      // sort()	Sorts the elements of an array.
+    
+      // splice()	Adds/Removes elements from an array.
+    
+      // toString()	Converts an array to a string, and returns the result.
+    
+      // unshift()	Adds new elements to the beginning of an array, and returns the array's new length.
+    
+      // values()	Returns a Array Iteration Object, containing the values of the original array.
+      document.write("<br>");
+
+      //forEach Loop With Array
+      number_arr.forEach(myFun);
+      function myFun(value,index){
+          document.write(index+":"+value+"<br>");
+      }
+    </script>
+  </body>
+</html>
