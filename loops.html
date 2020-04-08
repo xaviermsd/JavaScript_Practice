@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loops</title>
+  </head>
+  <body>
+    <script>
+              var a = 1;
+              var b;
+              //wHile
+              while (a <= 10) {
+                document.write("Value of a is:" + a + "<br>");
+                a = a + 5;
+              }
+              //For Loop - With Odd Even Example
+            //   for (b = 1; b <= 100; b++) {
+            //     if (b % 2 == 0) {
+            //         document.write("Even number:"+ b + "<br>");
+            //     }
+            //     else{
+            //         document.write("Odd Number:"+ b + "<br>");
+            //     }
+            //   }
+              //Nested Loop - With Examples
+              //Matrix Example
+              var a;
+              var b;
+              document.write("<table style='border: 1px solid black';>");
+              for (a = 1; a <= 100;a=a+10){
+                  document.write("<tr>");
+                for (b = a; b < a+10; b++){
+                  //   document.write(b +" ");
+                    document.write("<td style='border: 1px solid black';>"+b +"</td>");
+                }
+                document.write("</tr>");
+              }
+              document.write("</table>");
+    </script>
+  </body>
+</html>
