@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM - Document Object Module</title>
+  </head>
+  <body>
+    <h1 id="h1Tag" class="h1Tag"><p>This is DOM Practice</p></h1>
+    <h2 id="h2Tag" class="h2Tag"><p>This is DOM 2 Practice</p></h2>
+    <script>
+      // WHAT CAN WE DO WITH DOM?
+
+      //HTML
+      //TEXT
+      //ATTRIBUTE
+
+      //DOM GET METHODS
+
+      //innerText
+      //innerHTML
+      //getAttribute
+      //getAttributeNode
+      //Attributes
+
+      //   var DOM = document
+      //     .getElementById("h1Tag")
+      //     .setAttribute("class", "H2Class");
+      //   console.log(DOM);
+
+      //DOM SET METHODS
+
+      //innerText
+      //innerHTML
+      //setAttribute
+      //setAttributeNode
+      //
+
+      //   var DOM2 = document
+      //     .getElementById("h2Tag")
+      //     .setAttribute("class", "h2class2");
+      //   console.log(DOM2);
+
+      var console2 = document.all;
+      console.log(console2);
+
+      var DOM4 = document.getElementsByClassName("h2Tag")[0].attributes;
+      var DOM3 = document.getElementsByClassName("h2Tag")[0].innerText="It's changed finally!";
+    //   DOM3.getElementsByClassName("h2Tag")[0].innerText = "h3Tag";
+      console.log(DOM3);
+      console.log(DOM4);
+    </script>
+  </body>
+</html>
