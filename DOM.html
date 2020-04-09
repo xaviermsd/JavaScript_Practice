@@ -45,8 +45,9 @@
       console.log(console2);
 
       var DOM4 = document.getElementsByClassName("h2Tag")[0].attributes;
-      var DOM3 = document.getElementsByClassName("h2Tag")[0].innerText="It's changed finally!";
-    //   DOM3.getElementsByClassName("h2Tag")[0].innerText = "h3Tag";
+      var DOM3 = (document.getElementsByClassName("h2Tag")[0].innerText =
+        "It's changed finally!");
+      //   DOM3.getElementsByClassName("h2Tag")[0].innerText = "h3Tag";
       console.log(DOM3);
       console.log(DOM4);
     </script>
