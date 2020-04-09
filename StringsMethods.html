@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strings Methods</title>
+  </head>
+  <body>
+    <script>
+      var s = "Hello I'm Harsh Harsh Harsh Prajapati";
+      //Lnegth, UpperCase, LowerCase
+      document.write(
+        s.length + "<br>" + s.toLowerCase() + "<br>" + s.toUpperCase()
+      );
+
+      //Includes - Search Given Required Text from
+      //search- with right Given Position
+      //match- Find same word for again again and will make it array
+      var is = s.includes("Harsh"); //s.search
+      var match = s.match(/Harsh/g);
+      document.write(is);
+      document.write(match);
+
+      //IndexOf(). LastIndexOF() - Will search ir from last and give index
+      var index = s.indexOf("Harsh");
+      var index2 = s.lastIndexOf("Harsh");
+      document.write("<br>" + index);
+      document.write("<br>" + index2);
+
+      //(/word/g)- Will replace alll with gloably!
+
+      //Replace - Replace the string word with given string word
+      var string = s.replace(/Harsh/g, "Rishu");
+      document.write("<br>" + string);
+
+      //Trim - Extra Spaces
+      var trim = s.trim();
+      document.write("<br>" + trim);
+
+      //charAT- Will return the character from given index
+      var char = s.charAt(10);
+      document.write("<br>" + char);
+
+      //Concat - Contact Two strings
+      var s1 = "Welcome";
+      var concat = s.concat(s1);
+      document.write("<br>" + concat);
+
+      //Split - Breaks and Converts in function
+      var Split = s.split(" ");
+      document.write("<br>" + Split);
+
+      //Splice - cut frm given character and give us
+      var Splice = s.slice(3);
+      document.write("<br>" + Splice);
+
+      //ToString- If String is Given numeric, It will convert it to String
+      var num = 123;
+      var toString = num.toString();
+      document.write("<br>" + toString);
+      //Test :D
+      var type = typeof toString;
+      document.write("<br>" + type);
+
+      //valueOf-  It's defualt function- Returns string!
+      //END
+    </script>
+  </body>
+</html>

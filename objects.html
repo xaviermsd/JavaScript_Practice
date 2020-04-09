@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      document.write("Objects in JavaScript<br>");
+      var myDetails = {
+        firstName: "Harsh",
+        lastName: "Prajapati",
+        age: 24,
+        jobPosition: "Web Developer",
+        myArray: ["Harsh", "Prajapti", "Ok", "9 April"], //Array in objects
+        myFun: function () {
+          //Function in objects
+          return "Hello Fun is working";
+        },
+        newObject: {
+          //Objects in Objects
+          Name: "Rishu",
+          lastName: "Prajapati",
+          age: 24,
+          jobPosition: "Web Developer",
+        },
+        myFun2: function () {
+          return "Hello" + this.firstName + this.lastName; //This Operator in JS
+        },
+      };
+      document.write(myDetails.firstName + "<br>");
+      document.write(myDetails.myArray[1]);
+      document.write(myDetails.myFun());
+      document.write("<br>" + myDetails.newObject.Name);
+      document.write("<br>" + myDetails.myFun2());
+
+      //Secound Method;
+      var myObject = new Object();
+      myObject.firstName = "Gansyam";
+      myObject.Lastname = "Prajapati";
+      (myObject.age = 25), (myObject.email = "harshprajapati34@gmail.com");
+
+      document.write("<br>");
+      document.write(myObject.firstName);
+      document.write("<br>");
+      document.write(myObject.Lastname);
+
+      //Array of objects
+
+      var ArrayObjects = [
+        {
+          firstName: "Harsh",
+          lastName: "Prajapati",
+          age: 24,
+          jobPosition: "Web Developer",
+        },
+        {
+          firstName: "Rishu",
+          lastName: "Prajapati",
+          age: 24,
+          jobPosition: "Web Developer",
+        },
+        {
+          firstName: "Ishwar",
+          lastName: "Prajapati",
+          age: 24,
+          jobPosition: "Web Developer",
+        },
+      ];
+      document.write("<br>");
+      for (var a = 0; a < ArrayObjects.length; a++) {
+        document.write("Entry no:" + a + "<br>");
+        document.write(
+          "First Name is:" +
+            ArrayObjects[a].firstName +
+            "<br>" +
+            "Last Name is:" +
+            ArrayObjects[a].lastName +
+            "<br>" +
+            "Age is:" +
+            ArrayObjects[a].age +
+            "<br>" +
+            "Job Position is:" +
+            ArrayObjects[a].jobPosition +
+            "<br>"
+        );
+      }
+
+      //Const Variable in Array and Objects
+
+      //Const Variable can be change with Array's and Object's Property
+      //Can't modeifed or decalred or use object/array again
+      //e.g
+      const myArray = ["Harsh", "Prajapti", 23];
+      myArray[0] = "Rishu"; //Right way
+      //const myArray=["Rishu","OK1",1]; //wrong method so not possible with this way
+      document.write(myArray[0]);
+
+      //Same thing is in object
+      const myObject2 = {
+        firstName: "Ishwar",
+        lastName: "Prajapati",
+        age: 24,
+        jobPosition: "Web Developer",
+      };
+      myObject2.firstName = "ShamuBen"; //With this way only..
+      document.write(myObject2.firstName);
+
+      //For in Loop with Objects
+      const myObject3 = {
+        firstName: "Ishwar",
+        lastName: "Prajapati",
+        age: 24,
+        jobPosition: "Web Developer",
+      };
+      for (var key in myObject3) {
+        document.write("<br>");
+        document.write(key + ":" + myObject3[key]);
+      }
+    </script>
+  </body>
+</html>

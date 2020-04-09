@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Map Function</title>
+  </head>
+  <body>
+    <script>
+      //Array Map() Function
+      var myArray = [10, 20, 30, 40, 50];
+      var mapFun = myArray.map(myFunction);
+
+      function myFunction(x) {
+        return x * 10;
+      }
+      document.write(mapFun);
+
+      //From Objects we can also dig values and make a new array!
+      var ArrayObjects = [
+        {
+          firstName: "Harsh",
+          lastName: "Prajapati",
+          age: 24,
+          jobPosition: "Web Developer",
+        },
+        {
+          firstName: "Rishu",
+          lastName: "Prajapati",
+          age: 24,
+          jobPosition: "Web Developer",
+        },
+        {
+          firstName: "Ishwar",
+          lastName: "Prajapati",
+          age: 24,
+          jobPosition: "Web Developer",
+        },
+      ];
+      var newArray = ArrayObjects.map(objFunction);
+      document.write("<br>" + newArray);
+      function objFunction(x) {
+        return (
+          "<br>First Name is:" + x.firstName + "<br>Last name is:" + x.lastName
+        );
+      }
+    </script>
+  </body>
+</html>
