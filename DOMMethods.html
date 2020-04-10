@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Events</title>
+  </head>
+  <body>
+    <h1 id="qse" class="qse" style="color: red;">DOM Query Selector</h1>
+    <script>
+      document.write("DOM Methods");
+
+      //QuerySelector
+      //document.querySelector(CSS Selector)
+
+      //QuerySelectorAll
+      //document.querySelectorALL(CSS Selector)
+
+      //DOM CSS stytle Methods;
+
+      //Style
+      document.querySelector("#qse").style.color;
+
+      //ClassName
+      document.querySelector("#qse").className = "abc";
+
+      //ClassList
+      var ok = (document.querySelector("#qse").classList = "ok ok ok");
+      console.log = ok;
+    </script>
+  </body>
+</html>

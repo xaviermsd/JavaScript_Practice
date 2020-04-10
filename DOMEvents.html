@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Events</title>
+  </head>
+  <body>
+    <button id="btn">OK</button>
+    <button id="btn2">OK2</button>
+    <script>
+      document.getElementById("btn").onmouseover = myBtn;
+      function myBtn() {
+        document.getElementById("btn").style.backgroundColor = "red";
+      }
+      document.getElementById("btn").onmouseleave = myBtn2;
+      function myBtn2() {
+        document.getElementById("btn").style.backgroundColor = "transparent";
+      }
+
+      //addEventListener()
+      //Method1
+      document.getElementById("btn2").addEventListener("mouseenter", myBtn3);
+      function myBtn3() {
+        // alert("addEventListerner method 1 is working!");
+        this.style.backgroundColor = "red";
+      }
+      //Method2
+      document
+        .getElementById("btn2")
+        .addEventListener("mouseleave", function () {
+          {
+            //   alert("addEventListerner method 2 is working!");
+            this.style.backgroundColor = "transparent";
+          }
+        });
+
+      //removeEventListener()
+      document.getElementById("btn2").removeEventListener("mouseenter", myBtn3);
+      //   function myBtn3() {
+      //     // alert("addEventListerner method 1 is working!");
+      //     this.style.backgroundColor = "red";
+      //   }
+    </script>
+  </body>
+</html>
