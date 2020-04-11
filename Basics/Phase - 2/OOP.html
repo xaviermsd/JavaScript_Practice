@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript-Phase-2</title>
+  </head>
+  <body>
+    <script>
+      //OOPS In JavaScript
+
+      //Core Pillars
+
+      //Abstrction - Hide Inner Details and Show Essentials only
+      //Reduce Complexity + Isolate impact of change
+      //Inheritance = Eliminate redundant of code
+      //Porimorphism = Refactor ugly switch/case statements
+
+      //1. Encapsulation
+      //It's a single unit that hold properties and methods and variables.
+
+      //Example:
+
+      //   let salary = 30000;
+      //   let charge = 20;
+      //   let overtime = 10;
+
+      //   function getWage() {
+      //     console.log(salary+(charge * overtime));
+      //   }
+      //   getWage();
+
+      let salaryCount = {
+        salary: 30000,
+        rate: 10,
+        overtime: 8,
+        count: function () {
+          console.log(this.salary + this.rate * this.overtime);
+        },
+      };
+      salaryCount.count();
+    </script>
+  </body>
+</html>

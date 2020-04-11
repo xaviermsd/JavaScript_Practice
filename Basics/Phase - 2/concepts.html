@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects - JavaScript</title>
+  </head>
+  <body>
+    <script>
+      //Objects Literals
+      let salaryCount = {
+        salary: 30000,
+        rate: 10,
+        overtime: 8,
+        count: function () {
+          console.log(this.salary + this.rate * this.overtime);
+        },
+      };
+      salaryCount.count();
+
+      //Factory Function
+
+      // function createCircle(radius) {
+      //   return {
+      //     radius,
+      //     draw: function () {
+      //       console.log("draw");
+      //     },
+      //   };
+      // }
+      // const circle = createCircle();
+      // circle.draw(1);
+
+      //Constructors Function
+
+      function Circle(radius2) {
+        this.radius = radius2;
+        this.draw = function () {
+          console.log(radius2);
+        };
+      }
+      const another = new Circle();
+    </script>
+  </body>
+</html>
