@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects - Prototype</title>
+  </head>
+  <body>
+    <script>
+      console.log("objects-protoypes");
+      let car = {
+        name: "Maruti 800",
+        price: "119000",
+        topSpeed: "80kmph",
+        myFun: function () {
+          console.log("car is running");
+        },
+      };
+      function myObj(getName) {
+        this.name = getName;
+      }
+      myObj.prototype.gtName = function () {
+        return this.name;
+      };
+      let obj2 = new myObj("Walkswegan");
+      console.log(obj2);
+    </script>
+  </body>
+</html>

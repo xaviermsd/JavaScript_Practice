@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inheritance-ES6 | JavaScript</title>
+  </head>
+  <body>
+    <script>
+      console.log("Inheritance in JavaScript");
+      class myClass {
+        constructor(givenName, givenStd, givenSchool) {
+          this.name = givenName;
+          this.std = givenStd;
+          this.school = givenSchool;
+        }
+        slogan() {
+          return `Hello I'm ${this.name} and ${this.school} is best school`;
+        }
+        static add(a, b) {
+          //static method so no need to use objects litrals
+          return a + b;
+        }
+      }
+
+      //   let obj1 = new myClass("harsh", 1, "SOS");
+      //   console.log(obj1);
+      //   console.log(myClass.add(2, 3));
+
+      //Inheriance
+      class myClass2 extends myClass {
+        constructor(givenName, givenStd, givenSchool, emailId, givenAddress) {
+          super(givenName, givenStd, givenSchool);
+          this.email = emailId;
+          this.address = givenAddress;
+        }
+        static add2(a, b) {
+          return a * b;
+        }
+        myFun2() {
+          return `${this.name}'s email id is ${this.email}`;
+        }
+      }
+      let obj2 = new myClass2(
+        "Rishu",
+        11,
+        "RN Prajapati",
+        "rishu@gmail.com",
+        "Village"
+      );
+      console.log(obj2);
+      console.log(obj2.name);
+      console.log(obj2.std);
+      console.log(myClass2.add2(3, 3));
+      console.log(obj2.myFun2());
+    </script>
+  </body>
+</html>

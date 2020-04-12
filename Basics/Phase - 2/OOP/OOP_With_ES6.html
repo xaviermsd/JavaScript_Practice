@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ES6 | JavaScript</title>
+  </head>
+  <body>
+    <script>
+      console.log("ES6 in JavaScript");
+      class myClass {
+        constructor(givenName, givenStd, givenSchool) {
+          this.name = givenName;
+          this.std = givenStd;
+          this.school = givenSchool;
+        }
+        slogan() {
+          return `Hello I'm ${this.name} and ${this.school} is best school`;
+        }
+        static add(a, b) {
+          //static method so no need to use objects litrals
+          return a + b;
+        }
+      }
+      let obj1 = new myClass("harsh", 1, "SOS");
+      console.log(obj1);
+      console.log(myClass.add(2, 3));
+    </script>
+  </body>
+</html>

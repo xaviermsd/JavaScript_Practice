@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise-Class | JavaScript</title>
+  </head>
+  <body>
+    <script>
+      //Exercise
+
+      //create a class libry and implement the following:
+      //constructor miust take the book list as an argument
+      //getBookList()
+      //issueBook(bookname,user)
+      //returnBook(bookname)
+      console.log("Exercise - Class | JavaScript");
+      class libraryClass {
+        constructor(bookList) {
+          this.bookList = bookList;
+          this.issuedBookList = {};
+        }
+        getbookList() {
+          this.bookList.forEach((element) => {
+            console.log(element);
+          });
+        }
+        issueBook(bookName, user) {
+          if (this.issuedBookList[bookName] == undefined) {
+            this.issuedBookList[bookName] = user;
+            return "Thank you issuing it , but make sure, you will return it on time!! :D";
+          } else {
+            return "This is book is already given to someone, please select another one from booklsit OR you can ask that guy to return it first -hehe! Have a good day -Thank you!";
+          }
+        }
+        returnBook(bookName) {
+          if (this.issuedBookList[bookName] == undefined) {
+            return "Duh , You dont have any books yet? make sure you will issue it first!";
+          } else {
+            delete this.issuedBookList[bookName];
+            return "thank you for returning, Have a good day pal";
+          }
+        }
+      }
+      let bookObj = new libraryClass([
+        "book1",
+        "book2",
+        "book3",
+        "book4",
+        "book5",
+      ]);
+      console.log(bookObj);
+      bookObj.getbookList();
+    </script>
+  </body>
+</html>

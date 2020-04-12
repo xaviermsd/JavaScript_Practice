@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Constructors | JavaScript</title>
+  </head>
+  <body>
+    <script>
+      console.log("Constructors in JavaScript...");
+
+      //Object
+      // let car = {
+      //   name: "Maruti 800",
+      //   price: "119000",
+      //   topSpeed: "80kmph",
+      //   myFun: function () {
+      //     console.log("car is running");
+      //   },
+      // };
+
+      // console.log(car.myFun);
+      // // console.log(
+      // //   `${car.name}'s price is:${
+      // //     car.price
+      // //   } and it has a funtion which:${car.myFun()}`
+      // // );
+
+      //Construcator
+      function genralCar(carName, carPrice, CarSpeed) {
+        this.name = carName;
+        this.price = carPrice;
+        this.topSpeed = CarSpeed;
+        this.myFun = function () {
+          console.log(`${this.name}'s price is:${this.price}`);
+        };
+      }
+      altoCar = new genralCar("alto", "2000", "20km/h");
+      altoCar2 = new genralCar("alto1", "20001", "202km/h");
+      altoCar3 = new genralCar("alto2", "20002", "203km/h");
+      altoCar4 = new genralCar("alto3", "20003", "204km/h");
+      altoCar5 = new genralCar("alto4", "20004", "205km/h");
+      console.log(altoCar);
+      console.log(altoCar2);
+      console.log(altoCar3);
+      console.log(altoCar4);
+      console.log(altoCar5);
+    </script>
+  </body>
+</html>
