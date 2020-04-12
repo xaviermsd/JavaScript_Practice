@@ -4,18 +4,22 @@ showNotes()
 let addBtn = document.getElementById('addNote')
 addBtn.addEventListener('click', function (_e) {
   let addDetails = document.getElementById('addDetails')
-  //let addTitle = document.getElementById('addTitle')
+  let addTitle = document.getElementById('addTitle')
   let notes = localStorage.getItem('notes')
   if (notes == null) {
     noteObj = []
   } else {
     noteObj = JSON.parse(notes)
   }
-  noteObj.push(addDetails.value)
+  let myObj={
+    title:addTitle.value,
+    details:addDetails.value
+  };
+  noteObj.push(myObj)
   //   noteObj.push(addTitle.value)
   localStorage.setItem('notes', JSON.stringify(noteObj))
   addDetails.value = ''
-  //addTitle.value = ''
+  addTitle.value = ''
   //   console.log(noteObj)
   showNotes()
 })
@@ -31,8 +35,8 @@ function showNotes () {
   noteObj.forEach(function (element, index) {
     html += `<div class="noteCard card mx-2 my-2" style="width: 18rem;">
                         <div class="card-body">
-                            <h5 class="card-title">Note ${index + 1}</h5>
-                            <p class="card-text">${element}</p>
+                            <h5 class="card-title">Note Title ${":"+element.title}</h5>
+                            <p class="card-text">${element.details}</p>
                             <button id="${index}" onclick= "deletNotes(this.id)" class="btn btn-primary">Delete</a>
                         </div>
                     </div>`
@@ -41,7 +45,7 @@ function showNotes () {
   if (noteObj.length != 0) {
     notesElm.innerHTML = html
   } else {
-    notesElm.innerHTML = `Noting to how her - Please add note above`
+    notesElm.innerHTML = `Noting to show here - Please add note above`
   }
 }
 
