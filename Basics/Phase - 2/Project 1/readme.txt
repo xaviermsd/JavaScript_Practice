@@ -1,10 +1,10 @@
 Adding your notes is now easy and very quick!
 
--You can add notes 
+-You can add notes ( Title and Details )
 -Delete them
 -Filter them
 
-Technologies used - HTML, CSS , Bootstrap, JavaScript
+Technologies used - HTML, CSS , Bootstrap, JavaScript.
 
 Made with Pure JavaScript with the use of LocalStorage of browsers.
 
