@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function</title>
+</head>
+
+<body>
+    <script>
+        // The concept of arrows was first introduced in
+        //CoffeeScript and since then, the javascript
+        //developers who had worked with CoffeScript wanted
+        //the same concept in JavaScript. And finally,
+        //arrows were introduced in ES6.
+        //Arrow functions simply reduced the number of lines in a program.
+        //Normal Function
+        let myFun = function() {
+            console.log("Function is working");
+        };
+        myFun();
+
+        //ArrowFunction
+        let myFun2 = () => {
+            console.log("Function is working too");
+        };
+        myFun2();
+
+        //Another Example
+        //Normal
+        const sum = function(a, b) {
+            return a + b;
+        };
+        //Arrow
+        console.log(sum(1, 2));
+        const sum2 = (a, b) => a + b;
+        console.log(sum2(1, 3));
+    </script>
+</body>
+
+</html>
