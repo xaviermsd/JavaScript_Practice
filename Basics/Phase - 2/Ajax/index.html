@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ajax - Asynchronous Programming</title>
+</head>
+
+<body>
+    <script>
+        //Synchronous Programming
+        // for (let index = 0; index < 4500; index++) {
+        //     const element = index;
+        //     console.log("This is Index no:" + element);
+        // }
+        // console.log("Done printing");
+
+        //Asynchronous Programming
+        setTimeout(() => {
+            for (let index2 = 0; index2 < 4500; index2++) {
+                const element2 = index2;
+                console.log("This is Index no:" + element2);
+            }
+        }, 5000);
+        console.log("Done printing");
+    </script>
+</body>
+
+</html>
