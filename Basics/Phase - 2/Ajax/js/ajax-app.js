@@ -53,22 +53,27 @@ function populateBtnClickHandler() {
 
     //3. What to do when  response is ready
     xhr.onload = function() {
-        if (this.status == 200) {
-            let obj = JSON.parse(this.responseText)
-                // console.log('obj is', +obj);
-            let populateTxt = document.getElementById('list')
-            str = '';
-            for (const key in obj) {
-                str += `<li>${obj[key].employee_name}</li>`
-                console.log(str)
+            if (this.status == 200) {
+                let obj = JSON.parse(this.responseText).data
+                console.log(obj)
+                let populateTxt = document.getElementById('tBody')
+                str = ''
+                for (const key in obj) {
+                    // str += `<li>${obj[key].employee_name}</li>`
+                    str += `<tr>
+                    <td>${obj[key].id}</td>
+                    <td>${obj[key].employee_name}</td>
+                    <td>${obj[key].employee_salary}</td>
+                    <td>${obj[key].employee_age}</td>
+                </tr>`
+                    console.log(str)
+                }
+                populateTxt.innerHTML = str
+            } else {
+                console.log('something is wrong')
             }
-            populateTxt.innerHTML = str
-        } else {
-            console.log('something is wrong')
         }
-    }
-
-    //4. Send the request
+        //4. Send the request
     xhr.send()
     console.log('We are done')
 }
